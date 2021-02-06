@@ -6,6 +6,7 @@ from database import mongo_client
 from log import get_logger
 from models.error_handler import error_blueprint
 from models.users_handler import users_blueprint
+from models.video_handler import video_blueprint
 
 logger = get_logger(__name__)
 
@@ -17,6 +18,7 @@ CORS(app)
 
 app.register_blueprint(error_blueprint)
 app.register_blueprint(users_blueprint)
+app.register_blueprint(video_blueprint)
 
 mongo_client.init_app(app, uri=config.MONGO_URI)
 

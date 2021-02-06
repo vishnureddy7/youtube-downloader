@@ -1,7 +1,7 @@
 import time
 import config
 from uuid import uuid4
-from flask import Blueprint, jsonify, session, request
+from flask import Blueprint, jsonify, request
 from flask_login import UserMixin, login_user, current_user
 from flask_login import logout_user, login_required, LoginManager
 from werkzeug.security import generate_password_hash, check_password_hash
